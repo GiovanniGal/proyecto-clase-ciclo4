@@ -38,7 +38,8 @@ const resolversUsuario = {
         correo: args.correo,
         tipoUsuario: args.tipoUsuario,
         estadoUsuario: args.estadoUsuario, 
-      });      
+      },
+      { new: true });      
       return editarUsuario;
     },
     eliminarUsuario: async (parent, args) => {
