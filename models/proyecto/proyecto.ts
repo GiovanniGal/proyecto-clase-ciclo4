@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
-import { ObjetiveModel } from "./objetives";
-import { UserModel } from "./user";
+import { ObjetiveModel } from "../objetivo";
+import { UserModel } from "../usuario/usuario";
 
 const projectSchema = new Schema({
 

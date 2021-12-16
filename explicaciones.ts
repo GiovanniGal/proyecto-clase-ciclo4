@@ -1,8 +1,8 @@
 import conectarBD from "./db/db";
-import { ProjectModel } from "./models/projects";
-import { UserModel } from "./models/user";
+import { ProjectModel } from "./models/proyecto/proyecto";
+import { UserModel } from "./models/usuario/usuario";
 import { ObjectId } from "mongoose";
-import { ObjetiveModel } from "./models/objetives";
+import { ObjetiveModel } from "./models/objetivo";
 
 
 const main = async () => {
