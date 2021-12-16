@@ -1,20 +1,23 @@
-import { Schema, model } from "mongoose";
-import { ProjectModel } from "../proyecto/proyecto";
-import { UserModel } from "../usuario/usuario";
+import mongoose from "mongoose";
+import { ProjectModel } from "../proyecto/proyecto.js";
+import { UserModel } from "../usuario/usuario.js";
+
+const { Schema, model } = mongoose;
 
 const inscriptionSchema = new Schema ({
   estado: {
     type: String,
-    enum: ['Aceptada', 'Rechazada'],
+    enum: ['ACEPTADO', 'RECHAZADO', 'PENDIENTE'],
+    default: 'PENDIENTE',
     required: true,
   },
   fechaIngreso: {
     type: Date,
-    required: true,
+    required: false,
   },
   fechaEgreso: {
     type: Date,
-    required: true,
+    required: false,
   },
   proyecto: {
     type: Schema.Types.ObjectId,

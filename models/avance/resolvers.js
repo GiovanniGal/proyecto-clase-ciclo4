@@ -1,9 +1,10 @@
-import { AdvancementModel } from "./avance"
+import { AdvancementModel } from "./avance.js"
 
 const resolversAvance = {
   Query:{
     Avances: async (parent, args) => {
-      const avances = await AdvancementModel.find().populate('proyecto')
+      const avances = await AdvancementModel.find()
+      .populate('proyecto')
       .populate('creadoPor');;
       return avances;
     },

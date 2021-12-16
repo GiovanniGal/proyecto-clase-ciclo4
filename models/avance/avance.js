@@ -1,6 +1,8 @@
-import { Schema, model } from "mongoose";
-import { ProjectModel } from "../proyecto/proyecto";
-import { UserModel } from "../usuario/usuario";
+import mongoose from 'mongoose';
+import { ProjectModel } from "../proyecto/proyecto.js";
+import { UserModel } from "../usuario/usuario.js";
+
+const { Schema, model } = mongoose;
 
 const advanceSchema = new Schema({
   proyecto: {

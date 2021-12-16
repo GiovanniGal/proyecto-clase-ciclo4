@@ -1,5 +1,7 @@
-import { Schema, model } from "mongoose";
-import { ProjectModel } from "./proyecto/proyecto";
+import mongoose from 'mongoose';
+//import { ProjectModel } from "./proyecto/proyecto.js";
+
+const { Schema, model } = mongoose;
 
 const objetiveSchema = new Schema({
 
@@ -9,7 +11,7 @@ const objetiveSchema = new Schema({
   },
   tipo: {
     type: String,
-    enum: ['General', 'Específico'],
+    enum: ['GENERAL', 'ESPECIFICO'],
     required: true,
   },
 /*   proyecto: {

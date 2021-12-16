@@ -1,6 +1,8 @@
-import { Schema, model } from "mongoose";
-import { ObjetiveModel } from "../objetivo";
-import { UserModel } from "../usuario/usuario";
+import mongoose from "mongoose";
+import { ObjetiveModel } from "../objetivo.js";
+import { UserModel } from "../usuario/usuario.js";
+
+const { Schema, model } = mongoose;
 
 const projectSchema = new Schema({
 
@@ -57,6 +59,22 @@ const projectSchema = new Schema({
       },
     }
   ]
+},
+{
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true },
+});
+
+projectSchema.virtual('avances', {
+  ref: 'advance',
+  localField: '_id',
+  foreignField: 'proyecto',
+});
+
+projectSchema.virtual('inscripciones', {
+  ref: 'inscription',
+  localField: '_id',
+  foreignField: 'proyecto',
 });
 
 const ProjectModel = model('project', projectSchema);
