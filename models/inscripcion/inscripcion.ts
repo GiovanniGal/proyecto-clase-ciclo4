@@ -1,6 +1,6 @@
 import { Schema, model } from "mongoose";
-import { ProjectModel } from "./projects";
-import { UserModel } from "./user";
+import { ProjectModel } from "../proyecto/proyecto";
+import { UserModel } from "../usuario/usuario";
 
 const inscriptionSchema = new Schema ({
   estado: {

@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { ProjectModel } from "./projects";
+import { ProjectModel } from "./proyecto/proyecto";
 
 const objetiveSchema = new Schema({
 
