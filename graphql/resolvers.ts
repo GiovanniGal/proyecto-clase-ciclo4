@@ -2,7 +2,7 @@ import { ProjectModel } from "../models/projects";
 import { UserModel } from "../models/user";
 
 const resolvers = {
-
+//Comentario
   Query:{
     Usuarios: async (parent, args) => {
       const usuarios = await UserModel.find();
